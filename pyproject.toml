@@ -1,0 +1,21 @@
+[project]
+name = "wolkenwart-regenradar"
+version = "0.1.0b1"
+requires-python = ">=3.14.2"
+dependencies = ["aiohttp", "h5py>=3.11", "pyproj==3.7.2"]
+
+[project.optional-dependencies]
+test = ["pytest-homeassistant-custom-component==0.13.364"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+# Dependency installation for local development; HACS installs the component.
+packages = []

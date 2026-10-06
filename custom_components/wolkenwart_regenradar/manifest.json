@@ -1,0 +1,17 @@
+{
+  "domain": "wolkenwart_regenradar",
+  "name": "Wolkenwart Regenradar",
+  "version": "0.1.0b1",
+  "codeowners": [
+    "@evgparen"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/evgparen/wolkenwart-regenradar",
+  "issue_tracker": "https://github.com/evgparen/wolkenwart-regenradar/issues",
+  "iot_class": "cloud_polling",
+  "integration_type": "service",
+  "requirements": [
+    "h5py>=3.11",
+    "pyproj==3.7.2"
+  ]
+}

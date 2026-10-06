@@ -1,0 +1,13 @@
+Wolkenwart Regenradar
+Copyright 2026 evgparen
+Licensed under the Apache License, Version 2.0.
+
+Weather data: Deutscher Wetterdienst (DWD), Open Data.
+https://www.dwd.de/DE/service/rechtliche_hinweise/rechtliche_hinweise.html
+
+This repository contains a new Home Assistant integration and a new reader
+for DWD RV ODIM HDF5 data. It does not include source files from the
+ha-dwd-precipitation integration or the previous Pergola Box radar module.
+The reader follows the DWD and EUMETNET format specifications listed in
+ARCHITECTURE.md. h5py and pyproj are external dependencies, installed
+separately under their respective licenses. They are not bundled here.

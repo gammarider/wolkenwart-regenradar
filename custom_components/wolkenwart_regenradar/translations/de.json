@@ -1,0 +1,75 @@
+{
+  "title": "Wolkenwart Regenradar",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Wolkenwart Regenradar",
+        "description": "Standort für die DWD-Prognose. Bestehende Integrationen bleiben unverändert.",
+        "data": {
+          "name": "Name",
+          "latitude": "Breitengrad",
+          "longitude": "Längengrad"
+        }
+      }
+    },
+    "error": {
+      "outside_coverage": "Standort außerhalb des DWD-Radargebiets."
+    },
+    "abort": {
+      "already_configured": "Standort bereits eingerichtet."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "threshold": "Regenschwelle (mm/h)",
+          "lead_minutes": "Schutzvorlauf (Minuten)",
+          "max_age": "Maximales Datenalter (Minuten)"
+        }
+      }
+    },
+    "abort": {
+      "invalid_threshold": "Ungültiger Schwellenwert."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "rain_start": {
+        "name": "Erwarteter Regenbeginn"
+      },
+      "close_at": {
+        "name": "Geplanter Schutzzeitpunkt"
+      },
+      "peak_next_hour": {
+        "name": "Maximale Intensität nächste Stunde"
+      },
+      "precipitation_next_hour": {
+        "name": "Niederschlag nächste Stunde"
+      },
+      "source_time": {
+        "name": "DWD-Ausgabe"
+      },
+      "data_age": {
+        "name": "Datenalter"
+      },
+      "data_status": {
+        "name": "Datenstatus",
+        "state": {
+          "current": "Aktuell",
+          "cached": "Zwischengespeichert",
+          "expired": "Abgelaufen",
+          "no_data": "Keine Daten"
+        }
+      }
+    },
+    "binary_sensor": {
+      "precipitation_expected": {
+        "name": "Niederschlag erwartet"
+      },
+      "protection_due": {
+        "name": "Regenschutz fällig"
+      }
+    }
+  }
+}

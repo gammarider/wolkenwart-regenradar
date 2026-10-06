@@ -1,0 +1,75 @@
+{
+  "title": "Wolkenwart Regenradar",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Wolkenwart Regenradar",
+        "description": "Location for DWD forecasts. Existing integrations remain unchanged.",
+        "data": {
+          "name": "Name",
+          "latitude": "Latitude",
+          "longitude": "Longitude"
+        }
+      }
+    },
+    "error": {
+      "outside_coverage": "Location outside the DWD radar area."
+    },
+    "abort": {
+      "already_configured": "Location already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "threshold": "Rain threshold (mm/h)",
+          "lead_minutes": "Protection lead (minutes)",
+          "max_age": "Maximum data age (minutes)"
+        }
+      }
+    },
+    "abort": {
+      "invalid_threshold": "Invalid threshold."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "rain_start": {
+        "name": "Expected rain start"
+      },
+      "close_at": {
+        "name": "Planned protection time"
+      },
+      "peak_next_hour": {
+        "name": "Peak intensity next hour"
+      },
+      "precipitation_next_hour": {
+        "name": "Precipitation next hour"
+      },
+      "source_time": {
+        "name": "DWD release"
+      },
+      "data_age": {
+        "name": "Data age"
+      },
+      "data_status": {
+        "name": "Data status",
+        "state": {
+          "current": "Current",
+          "cached": "Cached",
+          "expired": "Expired",
+          "no_data": "No data"
+        }
+      }
+    },
+    "binary_sensor": {
+      "precipitation_expected": {
+        "name": "Precipitation expected"
+      },
+      "protection_due": {
+        "name": "Rain protection due"
+      }
+    }
+  }
+}
